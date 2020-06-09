@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:replace="fragments :: head"></head>
+<body>
+    <header th:replace="fragments :: page-header"></header>
+    <div class="container body-content">
+        <form th:action="@{/search/results}" method="post" id="searchForm">
+            <h2>Search By:</h2>
+            <p>
+                <span th:each="column : ${columns}">
+                    <input
+                        type="radio"
+                        name="searchType"
+                        th:id="${column.key}"
+                        th:value="${column.key}"
+                        th:checked="${column.key == 'all'}">
+                    <label th:for="${column.key}" th:text="${column.value}"></label>
+                </span>
+            </p>
+            <p>
+                <label for="searchTerm">Name:</label>
+                <input type="text" name="searchTerm" id="searchTerm" />
+            </p>
+            <input type="submit" value="Search" />
+        </form>
+        <hr />
+        <div id="searchResults"></div>
+    </div>
+</body>
+</html>

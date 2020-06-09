@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <link rel='shortcut icon' type='image/x-icon' th:href="@{/css/favicon.ico}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/layout.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <script th:src="@{/js/loadSelect.js}"></script>
+    <title th:text="'United States Educational Attainment' + ${title == null ? '' : ' :: ' + title}">United States Educational Attainment</title>
+</head>
+<body>
+    <header th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar-collapse collapse">
+            <ul>
+                <li><a th:href="@{/}" class="navbar-brand">Home</a></li>
+                <li><a th:href="@{/search}">Search</a></li>
+                <li>
+                    <form>
+                        <select name="locationId">
+                            <option>View by state...</option>
+                        </select>
+                        <input type="submit" class="btn" value="Submit"/>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div th:fragment="scripts">
+        <script th:src="@{//d3js.org/d3.v4.min.js}"></script>
+        <script th:src="@{//d3js.org/topojson.v2.min.js}"></script>
+        <script th:src="@{//d3js.org/d3-scale-chromatic.v1.min.js}"></script>
+        <script th:src="@{/js/script.js}"></script>
+    </div>
+</body>
+</html>

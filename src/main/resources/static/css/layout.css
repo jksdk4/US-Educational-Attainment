@@ -1,0 +1,65 @@
+.body-content {
+    margin-top: 100px;
+}
+
+label {
+    margin-right: 15px;
+}
+
+.centered {
+    text-align: center;
+}
+
+p {
+    vertical-align: top;
+    margin-left: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.areaTitle {
+  font-size: 25px;
+  font-family: 'Garamond', serif;
+  color: #3366cc;   /* web-safe cerulean */
+}
+
+.areaStateTitle {
+  font-size: 25px;
+  font-family: 'Garamond', serif;
+  color: maroon;
+}
+
+.usAreaTitle {
+  font-size: 30px;
+  font-family: 'Garamond', serif;
+  color: darkgreen;
+}
+
+.abbrev {
+  font-size: 20px;
+}
+
+.term {
+  color: #4c4c4c;
+}
+
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav ul li {
+    margin-right: 85px;
+    display: inline-block;
+}
